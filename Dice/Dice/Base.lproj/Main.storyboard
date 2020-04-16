@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="ops-g9-5Ji">
+                                <rect key="frame" x="169.5" y="334" width="75" height="228"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice-1" translatesAutoresizingMaskIntoConstraints="NO" id="fkt-Ey-CUH">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQe-xn-LhG">
+                                        <rect key="frame" x="22.5" y="198" width="30" height="30"/>
+                                        <state key="normal" title="Roll!"/>
+                                        <connections>
+                                            <action selector="rollDice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0W-Y6-i1a"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ops-g9-5Ji" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wmh-IX-q1O"/>
+                            <constraint firstItem="ops-g9-5Ji" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u5S-8K-zA0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="diceImageView" destination="fkt-Ey-CUH" id="qe8-sf-mos"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice-1" width="75" height="75"/>
+    </resources>
+</document>
